@@ -1,8 +1,13 @@
 <?php
-
 namespace Dannehl\UserSettings;
+
 use Illuminate\Support\ServiceProvider;
 
+/**
+ * Class UserSettingsServiceProvider
+ *
+ * @package Dannehl\UserSettings
+ */
 class UserSettingsServiceProvider extends ServiceProvider
 {
 
@@ -13,15 +18,6 @@ class UserSettingsServiceProvider extends ServiceProvider
      */
     protected $defer = true;
 
-    /**
-     * Bootstrap the application services.
-     *
-     * @return void
-     */
-    public function boot()
-    {
-        //
-    }
 
     /**
      * Register the application services.
@@ -30,8 +26,8 @@ class UserSettingsServiceProvider extends ServiceProvider
      */
     public function register()
     {
-        $this->app->singleton('usersettings', function ($app) {
-            return new UserSettings();
+        $this->app->bind('usersettings', function ($app) {
+            return new \Dannehl\UserSettings\lib\UserSettings;
         });
     }
 
