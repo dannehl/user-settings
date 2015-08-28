@@ -18,7 +18,7 @@
     },
     "autoload": {
         "psr-4": {
-          "Shipcloud\\": "src/UserSettings/"
+          "UserSettings\\": "src/UserSettings/"
         }
     },
     "scripts": {
