@@ -17,18 +17,14 @@ Add the Facade:
 'UserSetting' => Dannehl\UserSettings\Facade\UserSettings::class,
 ```
 
+Make sure the folder /storage/userconf exists .
+
 ##Usage
 
-
 ```php
+// Store a value
+\UserSet::set('My_Name','John');
 
-// Get a value:
-
-\UserSet::get('key');
-
-
-// Set a value
-
-\UserSet::set('key','my_value');
-
+// Get a value
+echo \UserSet::get('My_Name');  // -> John
 ```
