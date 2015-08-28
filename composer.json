@@ -18,7 +18,7 @@
     },
     "autoload": {
         "psr-4": {
-          "UserSettings\\": "src/UserSettings/"
+          "Dannehl\\UserSettings\\": "src/UserSettings/"
         }
     },
     "scripts": {
