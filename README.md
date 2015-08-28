@@ -14,7 +14,7 @@ Dannehl\UserSettings\UserSettingsServiceProvider::class,
 Add the Facade:
 
 ```php
-'UserSetting' => Dannehl\UserSettings\Facade\UserSettings::class,
+'UserSettings' => Dannehl\UserSettings\Facade\UserSettings::class,
 ```
 ###Storage
 The settings are stored as key value pairs in a file for each user.
@@ -28,5 +28,5 @@ The user id is taken from Auth::user()->id;
 \UserSettings::set('My_Name','John');
 
 // Get a value
-echo \UserSetting::get('My_Name');  // -> John
+echo \UserSettings::get('My_Name');  // -> John
 ```
