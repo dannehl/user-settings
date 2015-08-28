@@ -23,8 +23,8 @@ Make sure the folder /storage/userconf exists .
 
 ```php
 // Store a value
-\UserSet::set('My_Name','John');
+\UserSetting::set('My_Name','John');
 
 // Get a value
-echo \UserSet::get('My_Name');  // -> John
+echo \UserSetting::get('My_Name');  // -> John
 ```
