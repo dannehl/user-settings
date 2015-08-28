@@ -16,14 +16,16 @@ Add the Facade:
 ```php
 'UserSetting' => Dannehl\UserSettings\Facade\UserSettings::class,
 ```
-
-Make sure the folder /storage/userconf exists .
+###Storage
+The settings are stored as key value pairs in a file for each user.
+Make sure the folder /storage/userconf exists. Filenames are generated from the user id, so this will only work for authenticated users.
+The user id is taken from Auth::user()->id;
 
 ##Usage
 
 ```php
 // Store a value
-\UserSetting::set('My_Name','John');
+\UserSettings::set('My_Name','John');
 
 // Get a value
 echo \UserSetting::get('My_Name');  // -> John
